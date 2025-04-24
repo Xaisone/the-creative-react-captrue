@@ -8,38 +8,40 @@ import {
 import { motion } from "framer-motion";
 
 const AboutSection = () => {
-  const titleAnim = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 3 } },
-  };
+  // const titleAnim = {
+  //   hidden: { opacity: 0 },
+  //   show: { opacity: 1, transition: { duration: 3 } },
+  // };
 
-  const container = {
-    hidden: { x: 100 },
-    show: {
-      x: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-        staggerChildren: 1,
-        when: "afterChildren",
-      },
-    },
-  };
+  // const container = {
+  //   hidden: { x: 100 },
+  //   show: {
+  //     x: 0,
+  //     transition: {
+  //       duration: 0.5,
+  //       ease: "easeOut",
+  //       staggerChildren: 1,
+  //       when: "afterChildren",
+  //     },
+  //   },
+  // };
+
+  // variants={container} initial="hidden" animate="show"
 
   return (
     <StyledAbout>
       <StyledDescription>
-        <motion.div variants={container} initial="hidden" animate="show">
+        <motion.div >
           <StyleHide>
-            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
+            <motion.h2 >We work to make</motion.h2>
           </StyleHide>
           <StyleHide>
-            <motion.h2 variants={titleAnim}>
+            <motion.h2 >
               Your <span> dreams</span>
             </motion.h2>
           </StyleHide>
           <StyleHide>
-            <motion.h2 variants={titleAnim}>comse true.</motion.h2>
+            <motion.h2 >comse true.</motion.h2>
           </StyleHide>
         </motion.div>
         <p>
