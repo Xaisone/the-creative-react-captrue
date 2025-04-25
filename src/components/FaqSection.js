@@ -1,14 +1,26 @@
 import styled from "styled-components";
 import { StyledAbout } from "../styles";
+import Toggle from "./Toggle";
+
 
 const FaqSection = () => {
+
   return (
     <Faq>
       <h2>
         Any Question <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How Do I Start</h4>
+      <Toggle title="How Do I Start">
+        <div className="answer">
+          <p>Lorem ipsum dolor sit amet</p>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
+            temporibus eius assumenda neque ea eveniet nemo dolores? Fuga, odio
+          </p>
+        </div>
+        
+      </Toggle>
+      <Toggle title="Daylies">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet</p>
           <p>
@@ -16,10 +28,8 @@ const FaqSection = () => {
             temporibus eius assumenda neque ea eveniet nemo dolores? Fuga, odio
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daylies</h4>
+      </Toggle>
+      <Toggle title="Diferrent Payment Methode">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet</p>
           <p>
@@ -27,10 +37,8 @@ const FaqSection = () => {
             temporibus eius assumenda neque ea eveniet nemo dolores? Fuga, odio
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Diferrent Payment Methode</h4>
+      </Toggle>
+      <Toggle title="What Product Do You Offer">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet</p>
           <p>
@@ -38,19 +46,7 @@ const FaqSection = () => {
             temporibus eius assumenda neque ea eveniet nemo dolores? Fuga, odio
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What Product Do You Offer</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
-            temporibus eius assumenda neque ea eveniet nemo dolores? Fuga, odio
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      </Toggle>
     </Faq>
   );
 };

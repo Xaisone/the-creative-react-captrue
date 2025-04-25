@@ -10,8 +10,6 @@ import { motion } from "framer-motion";
 import { titleAnim,fade,photoAnim } from "../animation";
 
 const AboutSection = () => {
-  
-
 
   // variants={container} initial="hidden" animate="show"
 
