@@ -5,7 +5,7 @@ import athlete from "../img/athlete-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 import theracer from "../img/theracer-small.png";
 // Animations
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import {
   sliderContainer,
   slider,
@@ -15,15 +15,15 @@ import {
   lineAnim,
 } from "../animation";
 import { UseScroll } from "../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
-
   const [element, controls] = UseScroll();
   const [element2, controls2] = UseScroll();
 
   return (
     <Work
-      exit="exit"
+
       variants={pageAnimation}
       initial="hidden"
       animate="show"
@@ -35,7 +35,7 @@ const OurWork = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}> </Frame4>
       </motion.div>
-      <Movie >
+      <Movie>
         <motion.h2 variants={fade}>The Ahlete</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
@@ -51,13 +51,19 @@ const OurWork = () => {
           <img src={theracer} alt="theracer" />
         </Link>
       </Movie>
-      <Movie ref={element2} variants={fade} animate={controls2} initial="hidden">
+      <Movie
+        ref={element2}
+        variants={fade}
+        animate={controls2}
+        initial="hidden"
+      >
         <motion.h2 variants={fade}>Good Times</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
           <img src={goodtimes} alt="goodtimes" />
         </Link>
       </Movie>
+      <ScrollTop/>
     </Work>
   );
 };
